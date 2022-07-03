@@ -30,4 +30,4 @@ def welcome():
 
     return render_template("index.html", printedResponse=response)
 
-app.run(host='0.0.0.0', port='5000')
+
