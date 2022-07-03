@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head> 
+  <title> Welcome Flask</title>
+
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}"> 
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+
+</head>
+
+<h1> CHUKS' MAGIC 8-BALL </h1>
+
+<body>
+  <h1> 
+  <p> Ask your question, Then hit submit </p>
+  <form class="pure-form" method="POST" action="/"> 
+    Question: <br>
+    <input type="text" name="questionIn"><br>
+    <button type="submit" class="pure-button pure-button-primary" value="Submit">Submit </button>
+  </form>
+  <h1> 
+   {% if printedResponse %}
+     <p> {{printedResponse}}</p>
+  {% endif %}
+  </div>
+</body>
